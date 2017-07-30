@@ -1,0 +1,8 @@
+---
+- name: Build an image and push it to a private repo
+  docker_image:
+    name: built-by-ankur
+    tag: test
+    path: /tmp/site
+    state: present
+    force: True
