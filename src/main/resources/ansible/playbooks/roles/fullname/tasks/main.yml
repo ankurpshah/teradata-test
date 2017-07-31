@@ -2,7 +2,8 @@
 - name: Build an image and push it to a private repo
   docker_image:
     name: built-by-ankur
-    tag: test
     path: "{{ docker_file_path }}"
     state: present
+    repository: localhost/built-by-ankur
+    push: yes
     force: True
