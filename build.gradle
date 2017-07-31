@@ -38,3 +38,12 @@ jar {
         attributes 'Main-Class': 'com.ankur.teradata.LastName'
     }
 }
+
+task copyJar(type:Copy) {
+    from 'build/libs'
+    into 'build/scripts/files'
+}
+
+copyJar.dependsOn build
+
+defaultTasks 'clean', 'build', 'copyJar'

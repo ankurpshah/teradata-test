@@ -2,4 +2,4 @@
 
 cd /opt
 firstname.sh
-java LastName
+java -jar testdata-test.jar ./fullname.txt
